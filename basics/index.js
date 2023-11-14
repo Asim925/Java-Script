@@ -25,3 +25,10 @@ colors[2] = "black";
 console.log(colors);
 // printing one of them
 console.log(colors[1]);
+
+// Function
+// name and lastname are pirmitives while there values are arguments
+function greet(name, lastname) {
+  console.log("hello " + name + lastname);
+}
+greet("Asim ", "Nazeer");
