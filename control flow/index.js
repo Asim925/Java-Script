@@ -4,7 +4,6 @@ if time is between 6 and 12 , then print Good morning!
 if time is between 12 and 6 , them print Good afternoon!
 else good evening*/
 
-// =====CODE STARTS====== //
 // if-else
 
 /*let hour = 3;
@@ -13,11 +12,8 @@ if (hour >= 6 && hour < 12) console.log("Good Morning");
 else if (hour >= 12 && hour < 6) console.log("Good Afternoon");
 else console.log("Good Evening"); */
 
-// =====CODE ENDS====== //
-
 // ========================= //
 
-// =====CODE STARTS HERE====== //
 // SWITCH statements
 
 /* let user = "guest";
@@ -38,11 +34,9 @@ switch (user) {
   default:
     console.log("unknown user");
 } */
-// =====CODE ENDS====== //
 
 // ========================= //
 
-// =====CODE STARTS HERE====== //
 // FOR lOOP
 // .....for(initialize , condition , increment or decrement operator )....
 
@@ -54,6 +48,14 @@ for (i = 0; i < 5; i++) {
 // for printing odd values by looping
 /* let i;
 for (i = 0; i <= 5; i++) {
-  // agr i ko 2 se divide krne pr remainder na bache to woh odd numbers
-  if (i % 2 !== 0) console.log(i);
+  if (i % 2 !== 0) console.log(i);  ,,// agr i ko 2 se divide krne pr remainder na bache to woh odd numbers
 } */
+
+// ========================= //
+// WHILE loop
+// while(condition)
+let i = 0;
+while (i <= 5) {
+  if (i % 2 !== 0) console.log(i);
+  i++;
+}
