@@ -80,3 +80,30 @@ while (i <= 5) {
 while (i <= 5) {
   if (i % 2 !== 0) console.log(i);
 } */
+
+// ========================= //
+// for-in loop :-
+
+/*is main ye hai ke jab ap ko value nahi balke 
+property print karwani ho to for in use karo*/
+
+// NO. 1
+
+// const person = {
+//   name: ": Asim",
+//   age: 15,
+// };
+
+// for (let property in person) console.log(property, person[property]);
+
+// NO. 2
+
+// const colors = ["red", "pink", "black"];
+// for (let index in colors) console.log(index, colors[index]);
+
+// ========================= //
+// for-of loop :-
+// used for arrays mostly to directly print each item on everyline
+
+// const colors = ["red", "pink", "black"];
+// for (let color of colors) console.log(color);
