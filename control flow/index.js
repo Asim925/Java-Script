@@ -53,9 +53,30 @@ for (i = 0; i <= 5; i++) {
 
 // ========================= //
 // WHILE loop
-// while(condition)
-let i = 0;
+// { while(condition) <== SYNTAX }
+/* let i = 0;
 while (i <= 5) {
   if (i % 2 !== 0) console.log(i);
   i++;
-}
+} */
+
+// ========================= //
+// do-while :-
+
+// let i = 7;
+// do {
+//   if (i % 2 !== 0) console.log(i);
+//   i++;
+// } while (i <= 5);
+
+// ========================= //
+// Infinite loop :-
+
+/* ..loop infinite tb hota ai jab condition poori
+ hi na horahi ho jaise i is less than 5 but 
+ no increment or any other operration is done ..*/
+
+/* let i = 0;
+while (i <= 5) {
+  if (i % 2 !== 0) console.log(i);
+} */
