@@ -109,8 +109,8 @@ property print karwani ho to for in use karo*/
 // for (let color of colors) console.log(color);
 
 // ========================= //
-// Break
 
+// Break
 // let i = 0;
 // while (i <= 10) {
 //   if (i === 5) break;
@@ -119,12 +119,21 @@ property print karwani ho to for in use karo*/
 // }
 
 // continue
-let i = 0;
-while (i <= 10) {
-  if (i % 2 === 0) {
-    i++;
-    continue;
-  }
-  console.log(i);
-  i++;
+// let i = 0;
+// while (i <= 10) {
+//   if (i % 2 === 0) {
+//     i++;
+//     continue;
+//   }
+//   console.log(i);
+//   i++;
+// }
+
+// ========================= //
+// EXERCISE;-
+function max(a, b) {
+  return a > b ? a : b;
 }
+
+let number = max(3, 2);
+console.log(number);
