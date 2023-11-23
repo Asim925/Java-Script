@@ -107,3 +107,24 @@ property print karwani ho to for in use karo*/
 
 // const colors = ["red", "pink", "black"];
 // for (let color of colors) console.log(color);
+
+// ========================= //
+// Break
+
+// let i = 0;
+// while (i <= 10) {
+//   if (i === 5) break;
+//   console.log(i);
+//   i++;
+// }
+
+// continue
+let i = 0;
+while (i <= 10) {
+  if (i % 2 === 0) {
+    i++;
+    continue;
+  }
+  console.log(i);
+  i++;
+}

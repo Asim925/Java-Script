@@ -1,6 +1,7 @@
 // square function
+let number = 5;
 function square(number) {
-  return number * number;
+  console.log(number * number);
 }
 /*ab hoa ye hai ke:
 1. function bnaya us ka name rakha square(number)
@@ -8,4 +9,4 @@ function square(number) {
 3. ab ye ban gaya function 
 4. phir hum ne function call kia (yani function ke name ke pirimitive main value dali) or phir console.log kia
 ..... output came then*/
-console.log(square(5));
+square(number);
