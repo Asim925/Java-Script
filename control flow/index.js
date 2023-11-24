@@ -142,8 +142,24 @@ property print karwani ho to for in use karo*/
 // ========================= //
 // EXERCISE 2;-
 
-function isLandscape(width, height) {
-  return width > height ? width : height;
-}
+// function isLandscape(width, height) {
+//   return width > height;
+// }
 
-let screen = isLandscape(500, 200);
+// let screen = isLandscape(10, 5);
+// console.log(screen);
+
+// ========================= //
+// EXERCISE 3;-
+
+const output = fizzBuzz(30);
+console.log(output);
+
+function fizzBuzz(input) {
+  if (typeof input !== "number") return "Not a Number";
+  if (input % 3 === 0 && input % 5 === 0) return "FizzBuzz";
+  if (input % 3 === 0) return "Fizz";
+  if (input % 5 === 0) return "Buzz";
+  if (input % 3 !== 0 && input % 5 !== 0)
+    return "number cant be divided by 3 and 5";
+}
