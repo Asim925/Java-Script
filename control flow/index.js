@@ -130,10 +130,20 @@ property print karwani ho to for in use karo*/
 // }
 
 // ========================= //
-// EXERCISE;-
-function max(a, b) {
-  return a > b ? a : b;
+// EXERCISE 1;-
+
+// function max(a, b) {
+//   return a > b ? a : b;
+// }
+
+// let number = max(3, 2);
+// console.log(number);
+
+// ========================= //
+// EXERCISE 2;-
+
+function isLandscape(width, height) {
+  return width > height ? width : height;
 }
 
-let number = max(3, 2);
-console.log(number);
+let screen = isLandscape(500, 200);
