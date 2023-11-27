@@ -151,15 +151,27 @@ property print karwani ho to for in use karo*/
 
 // ========================= //
 // EXERCISE 3;-
-
 const output = fizzBuzz(30);
 console.log(output);
 
 function fizzBuzz(input) {
   if (typeof input !== "number") return "Not a Number";
+  // return NaN;
+
   if (input % 3 === 0 && input % 5 === 0) return "FizzBuzz";
   if (input % 3 === 0) return "Fizz";
   if (input % 5 === 0) return "Buzz";
   if (input % 3 !== 0 && input % 5 !== 0)
     return "number cant be divided by 3 and 5";
+
+  // return input;
 }
+
+// ========================= //
+// EXERCISE 4;-
+
+// function checkSpeed(speed) {
+//   if (limit < 70) return "OK";
+// }
+
+// checkSpeed(0);
