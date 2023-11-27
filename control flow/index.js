@@ -151,27 +151,38 @@ property print karwani ho to for in use karo*/
 
 // ========================= //
 // EXERCISE 3;-
-const output = fizzBuzz(30);
-console.log(output);
+// const output = fizzBuzz(7);
+// console.log(output);
 
-function fizzBuzz(input) {
-  if (typeof input !== "number") return "Not a Number";
-  // return NaN;
+// function fizzBuzz(input) {
+//   if (typeof input !== "number") return "Not a Number";
+//   // return NaN;
 
-  if (input % 3 === 0 && input % 5 === 0) return "FizzBuzz";
-  if (input % 3 === 0) return "Fizz";
-  if (input % 5 === 0) return "Buzz";
-  if (input % 3 !== 0 && input % 5 !== 0)
-    return "number cant be divided by 3 and 5";
+//   if (input % 3 === 0 && input % 5 === 0) return "FizzBuzz";
+//   if (input % 3 === 0) return "Fizz";
+//   if (input % 5 === 0) return "Buzz";
+//   if (input % 3 !== 0 && input % 5 !== 0)
+//     return "number cant be divided by 3 and 5";
 
-  // return input;
-}
+//   // return input;
+// }
 
 // ========================= //
 // EXERCISE 4;-
+checkSpeed(129);
 
-// function checkSpeed(speed) {
-//   if (limit < 70) return "OK";
-// }
+function checkSpeed(speed) {
+  const speedLimit = 70;
+  const kmPerPoint = 5;
 
-// checkSpeed(0);
+  if (speed < speedLimit + kmPerPoint) {
+    console.log("OK");
+    return; //agr condition true hai to ok ke bad khallas agr nahi hai to if ke bad wala code run hoga
+  }
+
+  // formula banaya maine points ka ... or Math.floor se decimal value round off hoti hai
+  const points = Math.floor((speed - speedLimit) / kmPerPoint);
+
+  if (points >= 12) console.log("license suspended");
+  else console.log("points", points);
+}
