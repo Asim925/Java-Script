@@ -38,7 +38,7 @@ switch (user) {
 // ========================= //
 
 // FOR lOOP
-// .....for(initialize , condition , increment or decrement operator )....
+// .....for(initialize ; condition ; increment or decrement operator )....
 
 /*let i;
 for (i = 0; i < 5; i++) {
@@ -169,20 +169,38 @@ property print karwani ho to for in use karo*/
 
 // ========================= //
 // EXERCISE 4;-
-checkSpeed(129);
 
-function checkSpeed(speed) {
-  const speedLimit = 70;
-  const kmPerPoint = 5;
+// checkSpeed(129);
 
-  if (speed < speedLimit + kmPerPoint) {
-    console.log("OK");
-    return; //agr condition true hai to ok ke bad khallas agr nahi hai to if ke bad wala code run hoga
+// function checkSpeed(speed) {
+//   const speedLimit = 70;
+//   const kmPerPoint = 5;
+
+//   if (speed < speedLimit + kmPerPoint) {
+//     console.log("OK");
+//     return; //agr condition true hai to ok ke bad khallas agr nahi hai to if ke bad wala code run hoga
+//   }
+
+//   // formula banaya maine points ka ... or Math.floor se decimal value round off hoti hai
+//   const points = Math.floor((speed - speedLimit) / kmPerPoint);
+
+//   if (points >= 12) console.log("license suspended");
+//   else console.log("points", points);
+// }
+
+// ========================= //
+// EXERCISE 5;-
+
+function showNumbers(limit) {
+  if (typeof no !== "number")
+    console.log(
+      "ullu, number to likh kuch or likh raha hai jahils, KAHAN SE ATE HAIN YE "
+    );
+  // yahi same kam hum ternary operator se bhi kr sakte hain
+  for (let no = 0; no <= limit; no++) {
+    if (no % 2 === 0) console.log(no, ":", "Even");
+    else console.log(no, ":", "odd");
   }
-
-  // formula banaya maine points ka ... or Math.floor se decimal value round off hoti hai
-  const points = Math.floor((speed - speedLimit) / kmPerPoint);
-
-  if (points >= 12) console.log("license suspended");
-  else console.log("points", points);
 }
+
+showNumbers("a");
