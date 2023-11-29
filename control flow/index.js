@@ -233,18 +233,36 @@ property print karwani ho to for in use karo*/
 
 // ========================= //
 // EXERCISE 7;-
-const movie = {
-  title: "a",
-  releasedYear: 2050,
-  rating: 4,
-  director: "b",
-};
+// const movie = {
+//   title: "a",
+//   releasedYear: 2050,
+//   rating: 4,
+//   director: "b",
+// };
+// //
+// showProperties(movie);
+// //
+// function showProperties(obj) {
+//   for (let property in obj)
+//     if (typeof obj[property] === "string") console.log(property, obj[property]);
+// }
 
-showProperties(movie);
+// ========================= //
+// EXERCISE 8;-
 
-function showProperties(obj) {
-  for (let property in obj) {
-    if (typeof obj[property] === "string")
-      console.log(property, movie[property]);
-  }
-}
+//... 15 tk "3 ke multiples" : 3 6 9 12 15
+//   .15 tk "3 ke multiples" : 5 10 15
+//   .ye sare multiples add krne hain funtion ke mutabiq or phir
+//  in dono main jo same ho us ko aik bar consider karen ge
+
+// sum(15);
+// //
+// function sum(limit) {
+//   let sum = 0;
+//   //
+//   for (let i = 0; i <= limit; i++) {
+//     if (i % 3 === 0 || i % 5 === 0) sum += i;
+//   }
+//   //
+//   console.log(sum);
+// }
