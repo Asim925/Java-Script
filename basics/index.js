@@ -27,7 +27,7 @@ console.log(colors);
 console.log(colors[1]);
 
 // Function
-// name and lastname are pirmitives while there values are arguments
+// name and lastname are paramater while there values are arguments
 function greet(name, lastname) {
   console.log("hello " + name + lastname);
 }

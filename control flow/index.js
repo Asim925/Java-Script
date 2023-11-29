@@ -1,3 +1,7 @@
+// array length :-
+// const array = ["", 1, 2, 3];
+// console.log(array.length);
+// ======================================= //
 // if-else statements
 /* conditions are 
 if time is between 6 and 12 , then print Good morning! 
@@ -105,9 +109,6 @@ property print karwani ho to for in use karo*/
 // for-of loop :-
 // used for arrays mostly to directly print each item on everyline
 
-// const colors = ["red", "pink", "black"];
-// for (let color of colors) console.log(color);
-
 // ========================= //
 
 // Break
@@ -191,16 +192,40 @@ property print karwani ho to for in use karo*/
 // ========================= //
 // EXERCISE 5;-
 
-function showNumbers(limit) {
-  if (typeof no !== "number")
-    console.log(
-      "ullu, number to likh kuch or likh raha hai jahils, KAHAN SE ATE HAIN YE "
-    );
-  // yahi same kam hum ternary operator se bhi kr sakte hain
-  for (let no = 0; no <= limit; no++) {
-    if (no % 2 === 0) console.log(no, ":", "Even");
-    else console.log(no, ":", "odd");
+// function showNumbers(limit) {
+//   if (typeof no !== "number")
+//     console.log("ullu, number to likh jahils, KAHAN SE ATE HAIN YE");
+//   // yahi same kam hum ternary operator se bhi kr sakte hain
+//   for (let no = 0; no <= limit; no++) {
+//     if (no % 2 === 0) console.log(no, ":", "Even");
+//     else console.log(no, ":", "odd");
+//   }
+// }
+
+// showNumbers("a");
+
+// ========================= //
+// truthy and falsy
+
+// truthy or falsy woh hote hain jin ki value boolean na hoti ho balke koi or ho and if() pr show krwayen to hojaye
+
+// const word = true; //its not truthy its boolean
+// if (word) console.log("ok");
+
+// const letter = "a"; //its truthy cuz its not the boolean
+// if (letter) console.log("okay");
+
+// falsy : undefined , '', null, NaN ,0
+// agr in ko main if main likon ga to woh print nahi hogi
+
+// EXERCISE 6;-
+function countTruthy(array) {
+  let count = 0;
+  for (let value of array) {
+    if (value) count++;
   }
+  return count;
 }
 
-showNumbers("a");
+const array = [0, "", 1, 3];
+console.log(countTruthy(array));
