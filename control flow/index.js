@@ -1,6 +1,7 @@
 // array length :-
 // const array = ["", 1, 2, 3];
 // console.log(array.length);
+
 // ======================================= //
 // if-else statements
 /* conditions are 
@@ -205,6 +206,7 @@ property print karwani ho to for in use karo*/
 // showNumbers("a");
 
 // ========================= //
+
 // truthy and falsy
 
 // truthy or falsy woh hote hain jin ki value boolean na hoti ho balke koi or ho and if() pr show krwayen to hojaye
@@ -219,13 +221,30 @@ property print karwani ho to for in use karo*/
 // agr in ko main if main likon ga to woh print nahi hogi
 
 // EXERCISE 6;-
-function countTruthy(array) {
-  let count = 0;
-  for (let value of array) {
-    if (value) count++;
-  }
-  return count;
-}
+// let array = [0, "", 1, 3];
+// function countTruthy(array) {
+//   let i = 0;
+//   for (let value of array) {
+//     if (value) i++;
+//   }
+//   console.log(i);
+// }
+// countTruthy(array);
 
-const array = [0, "", 1, 3];
-console.log(countTruthy(array));
+// ========================= //
+// EXERCISE 7;-
+const movie = {
+  title: "a",
+  releasedYear: 2050,
+  rating: 4,
+  director: "b",
+};
+
+showProperties(movie);
+
+function showProperties(obj) {
+  for (let property in obj) {
+    if (typeof obj[property] === "string")
+      console.log(property, movie[property]);
+  }
+}
