@@ -309,18 +309,16 @@ property print karwani ho to for in use karo*/
 // ========================= //
 // EXERCISE LAST (11);-
 
-// showPrimes(20);
+showPrimes(20);
 
-// function showPrimes(limit) {
-//   for (let number = 2; number <= limit; number++) {
-//     let isprime = true;
-//     for (let factor = 2; factor < number; factor++) {
-//       if (number % factor === 0) {
-//         isprime = false;
-//         break;
-//       }
-//     }
+function showPrimes(limit) {
+  for (let number = 2; number <= limit; number++) {
+    if (isPrime(number)) console.log(number);
+  }
+}
 
-//     if (isprime) console.log(number);
-//   }
-// }
+function isPrime(number) {
+  for (let factor = 2; factor < number; factor++)
+    if (number % factor === 0) return false;
+  return true;
+}
