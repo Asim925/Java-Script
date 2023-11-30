@@ -255,7 +255,7 @@ property print karwani ho to for in use karo*/
 //   .ye sare multiples add krne hain funtion ke mutabiq or phir
 //  in dono main jo same ho us ko aik bar consider karen ge
 
-// sum(15);
+// sum(10);
 // //
 // function sum(limit) {
 //   let sum = 0;
@@ -265,4 +265,62 @@ property print karwani ho to for in use karo*/
 //   }
 //   //
 //   console.log(sum);
+// }
+
+// ========================= //
+// EXERCISE 9;-
+
+// grades
+// 0-59 F , 60-69 D , 70-79 C , 80-89 B , 90-100 A
+
+// const marks = [80, 80, 1000];
+// calculateGrade(marks);
+
+// function calculateGrade(marks) {
+//   let sum = 0;
+//   for (let mark of marks) {
+//     sum += mark;
+//   }
+//   let average = sum / marks.length;
+
+//   if (average < 60) console.log("F Grade");
+//   else if (average < 70) console.log("D Grade");
+//   else if (average < 80) console.log("C Grade");
+//   else if (average <= 90) console.log("B Grade");
+//   else console.log("A Grade");
+// }
+
+// ========================= //
+// EXERCISE 10;-
+
+// showStars(5);
+
+// // rows are 'row'
+// // stars are 'j'
+
+// function showStars(rows) {
+//   for (let row = 1; row <= rows; row++) {
+//     let pattern = "";
+//     for (let j = 0; j < row; j++) pattern += "*";
+//     console.log(pattern);
+//   }
+// }
+
+// ========================= //
+// EXERCISE LAST (11);-
+
+// showPrimes(20);
+
+// function showPrimes(limit) {
+//   for (let number = 2; number <= limit; number++) {
+//     let isprime = true;
+//     for (let factor = 2; factor < number; factor++) {
+//       if (number % factor === 0) {
+//         isprime = false;
+//         break;
+//       }
+//     }
+
+//     if (isprime) console.log(number);
+//   }
 // }
