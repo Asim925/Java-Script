@@ -4,7 +4,7 @@
 function name(parameter) {} 
 
 agr object ke andar function likhna ho to direct
-name() {} 
+name() {}  || name = function()
 or ye method kehlaye ga
 // */
 
