@@ -13,7 +13,7 @@ or ye method kehlaye ga
 //   return {
 //     radius, /* yahan mere pas parameter or us ki value dono same hain yani "radius: radius;" isliye direct parameter */
 //     draw() {
-//       /* ye  method banaya hai maine (details on top line: 3) */
+//       /* ye method banaya hai maine (details on top line: 3) */
 //       console.log("draw");
 //     },
 //   };
