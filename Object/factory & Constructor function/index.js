@@ -26,9 +26,6 @@ or ye method kehlaye ga
 // const circle1 = createCircle(1);
 // console.log(circle1);
 
-// const circle2 = createCircle(2);
-// console.log(circle2);
-
 // ========================================================================================
 // CONSTRUCTOR FUNCTION
 
@@ -41,10 +38,13 @@ AGR in ko dekhna ho to name.constructor karo console pr
 
 function Circle(radius) {
   this.radius = radius;
+
   this.draw = function () {
     console.log("draw");
   };
 }
-
-const circle = new Circle(1);
-console.log(circle);
+// // const another = new Circle(1);
+// /*is ki jaga hum do or ceezen bhi kr sakte hain call krne keliye jo easy hain */
+////////////////  koi aik chalao neche
+// Circle.call({}, 1);
+// Circle.apply({}, [1]);
