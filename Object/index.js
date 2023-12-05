@@ -10,7 +10,7 @@ or ye method kehlaye ga
 */
 
 /* (line: 12) agr yahan me return ke bajaye object ka naam rakh do to return object_name; krna pare ga is liye direct ye karo 
- (line: 13) yahan mere pas parameter or us ki value dono same hain yani "radius: radius;" isliye direct parameter
+ (line: 13) yahan mere pas parameter or us ki value dono same hain yani "radius: radius;" isliye direct parameter ki value
  (line: 14) ye method banaya hai maine 
  */
 
