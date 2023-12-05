@@ -14,20 +14,20 @@ or ye method kehlaye ga
  (line: 14) ye method banaya hai maine 
  */
 
-function createCircle(radius) {
-  return {
-    radius,
-    draw() {
-      console.log("draw");
-    },
-  };
-}
+// function createCircle(radius) {
+//   return {
+//     radius,
+//     draw() {
+//       console.log("draw");
+//     },
+//   };
+// }
 
-const circle1 = createCircle(1);
-console.log(circle1);
+// const circle1 = createCircle(1);
+// console.log(circle1);
 
-const circle2 = createCircle(2);
-console.log(circle2);
+// const circle2 = createCircle(2);
+// console.log(circle2);
 
 // ========================================================================================
 // CONSTRUCTOR FUNCTION
@@ -47,3 +47,4 @@ function Circle(radius) {
 }
 
 const circle = new Circle(1);
+console.log(circle);
