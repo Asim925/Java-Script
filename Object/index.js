@@ -36,15 +36,31 @@ or phir return kare ga sari "this" wali properties ko
 AGR in ko dekhna ho to name.constructor karo console pr
 */
 
-function Circle(radius) {
-  this.radius = radius;
+// function Circle(radius) {
+//   this.radius = radius;
 
-  this.draw = function () {
-    console.log("draw");
-  };
-}
+//   this.draw = function () {
+//     console.log("draw");
+//   };
+// }
 // // const another = new Circle(1);
 // /*is ki jaga hum do or ceezen bhi kr sakte hain call krne keliye jo easy hain */
+
 ////////////////  koi aik chalao neche
 // Circle.call({}, 1);
 // Circle.apply({}, [1]);
+
+// ========================================================================================
+// let x = 10;
+// let y = x;
+
+// x = 20;
+// console.log(y);
+
+// =========
+
+// let x = { value: 10 };
+// let y = x;
+
+// x.value = 20;
+// console.log(y);
