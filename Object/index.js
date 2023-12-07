@@ -66,24 +66,27 @@ AGR in ko dekhna ho to name.constructor karo console pr
 // console.log(y);
 
 // ========================================================================================
-const circle = {
-  radius: 1,
-  draw() {
-    console.log("draw");
-  },
-};
-console.log(circle);
+// const circle = {
+//   radius: 1,
+//   draw() {
+//     console.log("draw");
+//   },
+// };
+// console.log(circle);
 // for (let key in circle) console.log(key, circle[key]); // for in loop
 
 // for (let key of Object.keys(circle)) console.log(key); // circle (jo object hai us ki keys print horahi)
 
-for (let entry of Object.entries(circle)) console.log(entry); // ye krne se har value array ka element ban jati hai (html pr dekh)
+// for (let entry of Object.entries(circle)) console.log(entry); // ye krne se har value array ka element ban jati hai (html pr dekh)
 
-if ("radius" in circle) console.log("yes"); // agr radius name ki string circle (object) main hoi to yes show hoga
+// if ("radius" in circle) console.log("yes"); // agr radius name ki string circle (object) main hoi to yes show hoga
 
 // == Another object
 // const another = Object.assign({}, circle);
 // console.log(another);
 
-const another = { ...circle }; // copies the keys of the object (...name)
-console.log(another);
+// const another = { ...circle }; // copies the keys of the object (...name)
+// console.log(another);
+
+const message = "my name is Asim";
+console.log(message);
