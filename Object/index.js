@@ -90,3 +90,11 @@ AGR in ko dekhna ho to name.constructor karo console pr
 
 const message = "my name is Asim";
 console.log(message);
+console.log(message.length);
+console.log(message[5]);
+console.log(message.startsWith("my name")); // letters bhi use kr sakte hai
+console.log(message.endsWith("Asim")); // same
+console.log(message.includes("is"));
+console.log(message.includes("MY"));
+
+////
