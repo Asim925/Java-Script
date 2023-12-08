@@ -88,13 +88,30 @@ AGR in ko dekhna ho to name.constructor karo console pr
 // const another = { ...circle }; // copies the keys of the object (...name)
 // console.log(another);
 
-const message = "my name is Asim";
-console.log(message);
-console.log(message.length);
-console.log(message[5]);
-console.log(message.startsWith("my name")); // letters bhi use kr sakte hai
-console.log(message.endsWith("Asim")); // same
-console.log(message.includes("is"));
-console.log(message.includes("MY"));
+/* escape notations se hm kuch special characters waghaia show krwa sakte hain jaie ye : "    by using : \"  */
+// const message = "my name\n is Asim";
+// console.log(message);
+// console.log(message.length);
+// console.log(message[5]);
+// console.log(message.startsWith("my name")); // letters bhi use kr sakte hai
+// console.log(message.endsWith("Asim")); // same
+// console.log(message.includes("is"));
+// console.log(message.includes("MY"));
+// console.log(message.indexOf("n"));
+// console.log(message.replace("my", "second"));
+// console.log(message.toUpperCase());
+// console.log(message.trim()); // html pr dekho to faigh sides pr spaces remove hojayegi (trimLeft kr lo yr trimRight)
+// console.log(message.split(" "));
 
-////
+/* back-ticks `` lagane se hum personalized string bna sakte hain
+ jabke normal tarike se lambi hoti hai escape notation  "THAT'S HOW IT IS"  */
+
+const Name = "actiure";
+// 1+9 krne ka maqsad ${} ke maqsad ko samjhana hai
+const another = `Hey you ${Name} ${1 + 9}, 
+kaise ho
+kya ap ye prh rahe hain
+abhi bhi 'literally'
+ja na bhai `;
+
+console.log(another);
