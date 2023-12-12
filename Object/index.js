@@ -121,7 +121,7 @@ AGR in ko dekhna ho to name.constructor karo console pr
 const date1 = new Date(); // automatic
 console.log(date1);
 
-// ==>> alag se
+//////////// ==>> alag se
 console.log(date1.toDateString()); // date
 console.log(date1.toTimeString()); // time
 console.log(date1.toISOString()); // date time
