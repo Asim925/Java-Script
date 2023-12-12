@@ -106,12 +106,32 @@ AGR in ko dekhna ho to name.constructor karo console pr
 /* back-ticks `` lagane se hum personalized string bna sakte hain
  jabke normal tarike se lambi hoti hai escape notation  "THAT'S HOW IT IS"  */
 
-const Name = "actiure";
-// 1+9 krne ka maqsad ${} ke maqsad ko samjhana hai
-const another = `Hey you ${Name} ${1 + 9}, 
-kaise ho
-kya ap ye prh rahe hain
-abhi bhi 'literally'
-ja na bhai `;
+// const Name = "actiure";
+// // 1+9 krne ka maqsad ${} ke maqsad ko samjhana hai
+// const another = `Hey you ${Name} ${1 + 9},
+// kaise ho
+// kya ap ye prh rahe hain
+// abhi bhi 'literally'
+// ja na bhai `;
 
-console.log(another);
+// console.log(another);
+
+// ========================================================================================
+
+const date1 = new Date(); // automatic
+console.log(date1);
+
+// ==>> alag se
+console.log(date1.toDateString()); // date
+console.log(date1.toTimeString()); // time
+console.log(date1.toISOString()); // date time
+
+date1.setFullYear(2050); // change krne keliye
+console.log(date1);
+
+// const date2 = new Date(2023, 11, 11, 9); // descriptions se dekh kr khud likhi
+// console.log(date2);
+//
+// const date3 = new Date("January 11 2018  5:00 ");
+// console.log(date3);
+//
