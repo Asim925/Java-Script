@@ -43,28 +43,44 @@
 // console.log(address);
 
 // ===========================================================================
+// ANOTHER Exercise// ANOTHER Exercise
+
+// function Address(street, city, zipcode) {
+// this.street = street;
+// this.city = city;
+// this.zipcode = zipcode;
+// }
+//
+// let address1 = new Address("a", "b", "c");
+// let address2 = new Address("a", "b", "c");
+//
+// console.log(areEqual(address1, address2));
+// console.log(areSame(address1, address2));
+//
+// function areEqual(address1, address2) {
+// return (
+// address1.street === address2.street && // agr to ye sab true hoga to hi log hoga
+// address1.city === address2.city && // baghair if ke is tarhan kr liya GEO
+// address1.zipcode === address2.zipcode
+// );
+// }
+//
+// function areSame(address1, address2) {
+// return address1 === address2; // ye dono alag objects hai is waja se false aye ga
+// }
+//
+
+// ===========================================================================
 // ANOTHER Exercise
 
-function Address(street, city, zipcode) {
-  this.street = street;
-  this.city = city;
-  this.zipcode = zipcode;
-}
+// blogPost should contain these :
+// title ,,, body  ,,, author ,,, views ,,, comments(author,body) ,,, isLive
 
-let address1 = new Address("a", "b", "c");
-let address2 = new Address("a", "b", "c");
-
-console.log(areEqual(address1, address2));
-console.log(areSame(address1, address2));
-
-function areEqual(address1, address2) {
-  return (
-    address1.street === address2.street && // agr to ye sab true hoga to hi log hoga
-    address1.city === address2.city && // baghair if ke is tarhan kr liya GEO
-    address1.zipcode === address2.zipcode
-  );
-}
-
-function areSame(address1, address2) {
-  return address1 === address2; // ye dono alag objects hai is waja se false aye ga
-}
+const blogPost = {
+  title: "a",
+  body: "b",
+  author: "c",
+  views: "d",
+  comments: { author: "A", body: "B" },
+  isLive: true,
+};
