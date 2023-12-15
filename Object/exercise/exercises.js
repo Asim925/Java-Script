@@ -73,14 +73,48 @@
 // ===========================================================================
 // ANOTHER Exercise
 
-// blogPost should contain these :
+// Post should contain these :
 // title ,,, body  ,,, author ,,, views ,,, comments(author,body) ,,, isLive
 
-const blogPost = {
+const post = {
   title: "a",
   body: "b",
   author: "c",
-  views: "d",
-  comments: { author: "A", body: "B" },
+  views: 10,
+  comments: [{ author: "A", body: "B" }],
   isLive: true,
 };
+
+// ===1st WAY===
+//
+// for (let key in blogPost) {
+// console.log(key, ":", blogPost[key]);
+// }
+// ===2nd WAY===
+
+// function BlogPost(title, body, author) {
+//   this.title = title;
+//   this.body = body;
+//   this.author = author;
+//   // directly defined (not as paramteres)
+//   this.comments = [];
+//   this.isLive = false;
+//   this.views = 0;
+// }
+
+// const another = new BlogPost("a", "b", "c");
+
+// console.log(another);
+
+// ===========================================================================
+// ANOTHER Exercise
+
+let priceRange = [
+  { label: "$", name: "Cheap", minPrice: 0, maxPrice: 10 },
+  { label: "$$", name: "Standard", minPrice: 10, maxPrice: 20 },
+  { label: "$$$", name: "Expensive", minPrice: 20, maxPrice: 30 },
+];
+
+let restaurants = [
+  { averagePerson: 5 }, // auqat dikha di GEO!!!
+];
