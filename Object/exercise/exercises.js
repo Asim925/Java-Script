@@ -76,14 +76,14 @@
 // Post should contain these :
 // title ,,, body  ,,, author ,,, views ,,, comments(author,body) ,,, isLive
 
-const post = {
-  title: "a",
-  body: "b",
-  author: "c",
-  views: 10,
-  comments: [{ author: "A", body: "B" }],
-  isLive: true,
-};
+// const post = {
+//   title: "a",
+//   body: "b",
+//   author: "c",
+//   views: 10,
+//   comments: [{ author: "A", body: "B" }],
+//   isLive: true,
+// };
 
 // ===1st WAY===
 //
@@ -116,5 +116,5 @@ let priceRange = [
 ];
 
 let restaurants = [
-  { averagePerson: 5 }, // auqat dikha di GEO!!!
+  { averagePerson: 5 }, // auqat dikha di  bande ki GEO!!!
 ];
