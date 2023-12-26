@@ -121,7 +121,7 @@
 // // combined.slice(); se poora array wapis
 // // combined.slice(3, 5); se 3rd element se 5th tak print hoga
 
-// console.log("first array : " + first);
+// console.log("first array : " + first);<
 // console.log("last array : " + last);
 // console.log("====>");
 // console.log("combined array : " + combined);
@@ -129,7 +129,7 @@
 // console.log("slicing the combined one : " + sliced);
 
 // ========================================================================================
-// slicing and combining the array using easy (spread) method : PRIMITIVE TYPE
+// slicing and combining the array using easy method : PRIMITIVE TYPE
 
 // let first = [1, 2];
 // let last = [3, 4];
@@ -170,9 +170,98 @@
 // let joined = array.join(" , ");
 // console.log(joined);
 
-let message = "papa dabbu hain";
-let parts = message.split(" ");
-console.log(parts);
+// let message = "papa dabbu hain";
+// let parts = message.split(" ");
+// console.log(parts);
 
-let combined = parts.join("-");
-console.log(combined);
+// let combined = parts.join("-");
+// console.log(combined);
+
+// ========================================================================================
+// SORTING
+
+// =====?>>
+
+// const array = [2, 9, 8];
+// console.log(array.sort());
+// console.log(array.reverse());
+
+// =====?>>
+
+// const courses = [
+//   { id: 1, name: "javascript" }, // a
+//   { id: 2, name: "Node.js" }, // b
+// ];
+
+// courses.sort((a, b) => {
+//   // convert the text into lower / Upper case in the memory
+//   const nameA = a.name.toLowerCase;
+//   const nameB = b.name.toLowerCase;
+
+//   if (nameA > nameB) return 1; // 1 : first should be this
+//   if (nameA < nameB) return -1; // -1 : last should be this
+//   // if(nameA===nameB)
+//   return 0;
+// });
+
+// console.log(courses);
+
+// ========================================================================================
+// Checking every element or some element
+
+//======== =+ Every +=
+
+// const numbers = [1, 2, 3];
+//
+// let positive = numbers.every((value) => {
+//   return value >= 0;
+// });
+//
+// if (positive) console.log(numbers);
+//
+
+//====== =+ Some +=
+
+// const numbers = [1, -1, 2, 3];
+
+// // let somePositive = numbers.some(function(value) {return value >= 0;}) :::--
+// let somePositive = numbers.some((value) => value >= 0);
+
+// if (somePositive) console.log(numbers);
+
+// ========================================================================================
+// +++=== FILTER
+
+// const array = [1, -1, 2, -2];
+
+// console.log(`this is the array  ${array}`);
+// console.log("filtering negative out ");
+
+// let filtered = array.filter((value) => value >= 0);
+
+// console.log(`here it is :  ${filtered}`);
+
+// ========================================================================================
+// MAPPING
+
+// const numbers = [1, 2, 3];
+
+// let items = numbers.map((value) => "<li>" + value + "<li/>");
+// console.log("these are the items : " + items);
+
+// let list = items.join("  ");
+// console.log("by joining ; " + "<ul>" + list + "</ul>");
+
+// Mapping objects
+
+const numbers = [1, -1, 2, 3];
+
+const items = numbers
+  .filter((value) => value >= 0)
+  .map((value) => ({ anything: value }))
+  .filter((obj) => obj.anything > 1)
+  .map((obj) => obj.anything);
+
+console.log(items);
+
+/////is ko samajh shekh sahab se jldi ja kr pfir age jana
