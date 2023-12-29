@@ -242,7 +242,7 @@
 // console.log(`here it is :  ${filtered}`);
 
 // ========================================================================================
-// MAPPING
+// MAPPING ===>
 
 // const numbers = [1, 2, 3];
 
@@ -252,16 +252,34 @@
 // let list = items.join("  ");
 // console.log("by joining ; " + "<ul>" + list + "</ul>");
 
-// Mapping objects
+// Mapping objects  > ========= >>>
 
-const numbers = [1, -1, 2, 3];
+// const numbers = [1, -1, 2, 3];
 
-const items = numbers
-  .filter((value) => value >= 0)
-  .map((value) => ({ anything: value }))
-  .filter((obj) => obj.anything > 1)
-  .map((obj) => obj.anything);
+// const items = numbers
+//   .filter((value) => value >= 0)
+//   .map((value) => ({ anything: value }))
+//   .filter((obj) => obj.anything > 1)
+//   .map((obj) => obj.anything);
 
-console.log(items);
+// console.log(items);
 
-/////is ko samajh shekh sahab se jldi ja kr pfir age jana
+// ========================================================================================
+// REDUCING [all the values into 1 value {means add all of the values}]
+// ===>
+
+// let numbers = [-1, 2, 3, 1];
+
+// let sum = 0;
+// for (let number of numbers) sum += number;
+// console.log(sum);
+
+// ==== BY reducing ==>
+
+// let numbers = [1, 7, 3, 4, -4];
+
+// let addition = numbers.reduce((sum, value) => (sum += value));
+// console.log(addition);
+// // sum = 1st value , value = 2nd value ==> [sum = 1st + 2nd value](baqi sb bhi aise hi)
+// // sum is the the parameter where the value is going to be stored
+// // value is the parameter in which every value will be used of the array
