@@ -1,6 +1,6 @@
-const numbers = [1, 2, 3, 4, 1];
+const numbers = [56785, 67, 3, 2, 56785];
 
-let count = countOccurences(numbers, 7);
+let count = countOccurences(numbers, 67);
 
 console.log(count);
 
@@ -8,10 +8,10 @@ console.log(count);
 
 function countOccurences(array, searchElement) {
   let output = [];
+  if (!array.includes(searchElement)) return "invalid number";
 
   for (let element of array) {
     if (element === searchElement) output.push(element);
   }
-  console.log(`The number you gave has repeated : "${output.length}" times`);
-  if (!array.includes(searchElement)) return "invalid element";
+  return `The number you gave has repeated : "${output.length}" times`;
 }
