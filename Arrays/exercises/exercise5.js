@@ -1,6 +1,6 @@
-const numbers = [56785, 67, 3, 2, 56785];
+const numbers = [1, 1, 1, 2, 3, 3, 4];
 
-let count = countOccurences(numbers, 67);
+let count = countOccurences(numbers, 1);
 
 console.log(count);
 
@@ -18,8 +18,19 @@ console.log(count);
 
 // function 2
 
-function countOccurences(array, searchElement) {
-  let count = 0;
-  for (let element of array) if (element === searchElement) count++;
-  return count;
-}
+// function countOccurences(array, searchElement) {
+//   let count = 0;
+//   for (let element of array) if (element === searchElement) count++;
+//   return count;
+// }
+
+// function 3
+
+// function countOccurences(array, searchElement) {
+//   return array.reduce((accumulator, current) => {
+//     const occurence = current === searchElement ? 1 : 0;
+//     // check working
+//     // console.log(accumulator, current, searchElement);
+//     return accumulator + occurence;
+//   }, 0);
+// }
