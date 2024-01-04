@@ -4,14 +4,22 @@ let count = countOccurences(numbers, 67);
 
 console.log(count);
 
-// function
+// function 1
+
+// function countOccurences(array, searchElement) {
+//   let output = [];
+//   if (!array.includes(searchElement)) return "invalid number";
+
+//   for (let element of array) {
+//     if (element === searchElement) output.push(element);
+//   }
+//   return `The number you gave has repeated : "${output.length}" times`;
+// }
+
+// function 2
 
 function countOccurences(array, searchElement) {
-  let output = [];
-  if (!array.includes(searchElement)) return "invalid number";
-
-  for (let element of array) {
-    if (element === searchElement) output.push(element);
-  }
-  return `The number you gave has repeated : "${output.length}" times`;
+  let count = 0;
+  for (let element of array) if (element === searchElement) count++;
+  return count;
 }
