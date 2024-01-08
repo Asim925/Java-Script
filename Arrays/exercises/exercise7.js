@@ -4,13 +4,15 @@ const movies = [
   { title: "c", year: 2018, rating: 3 },
   { title: "d", year: 2017, rating: 4.5 },
 ];
-let movie1;
-if(movies[0].year&&movies[0].rating)
 
-
-/* 
-bhut dimagh ghuum gaya ab soch soch ke sar 
-main dard horaha hai subah se logic pr logic ,
-logic pr logic , logic pr logic , 
-bas KULLU KHALLAS HAJJEI 
+/*   ==> all movies having year 2018 and rating > 4
+     ==> sort them by the ratings
+     ==> arrange in descending order
+     ==> log only the titles after all the steps >>>
 */
+
+movies
+  .filter((movies) => movies.year > 2017 && movies.rating >= 4)
+  .sort((a, b) => a - b) // samjh le ye zaroori hai
+  .reverse()
+  .map((movies) => console.log(movies.title));
