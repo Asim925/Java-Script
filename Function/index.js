@@ -37,6 +37,8 @@
 // console.log(sum(1, 2, 3, 4, 4, 5));
 
 // ==============================================================================
+// REST OPERATOR ...args ;ex
+
 // we add al the prices first by reducing
 // then we give discount ,20 * (1 - 0.2) ==> 16 ;=
 // total * (1-discount) ;
