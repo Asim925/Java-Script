@@ -66,21 +66,50 @@
 // =============================================================================
 
 // get (getters) == used to access the functions like properties of an object
-// set (setters) == used to change the vaue of the property of an object outside
+// set (setters) == used to change the value of the property of an object outside
 //.. (na samah aye to chatgpt se pataa kro wohi se hi samjh aya
+
+// let person = {
+//   firstName: "Asim",
+//   lastName: "Nazeer",
+
+//   get fullName() {
+//     return `${person.firstName} ${person.lastName}`;
+//   },
+
+//   set fullName(value) {
+//     let parts = value.split(" ");
+//     (this.firstName = parts[0]), (this.lastName = parts[1]);
+//   },
+// };
+
+// person.fullName = "John bro";
+// console.log(person.fullname);
+
+// =============================================================================
+
 let person = {
   firstName: "Asim",
   lastName: "Nazeer",
 
-  get fullName() {
-    return `${person.firstName} ${person.lastName}`;
-  },
-
   set fullName(value) {
+    if (typeof value !== "string") {
+      throw new Error("value is not string.");
+    }
+
     let parts = value.split(" ");
+    if (parts.length !== 2) {
+      throw new Error("enter your full name");
+    }
     (this.firstName = parts[0]), (this.lastName = parts[1]);
   },
 };
 
-person.fullName = "John bro";
-console.log(person.fullName);
+try {
+  person.fullName = "asim";
+  // 'e' yahan humne aik name rakha jo value hold kare ga
+} catch (e) {
+  console.log(e);
+}
+
+console.log(person);
