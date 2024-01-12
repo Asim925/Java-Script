@@ -88,28 +88,44 @@
 
 // =============================================================================
 
-let person = {
-  firstName: "Asim",
-  lastName: "Nazeer",
+// let person = {
+//   firstName: "Asim",
+//   lastName: "Nazeer",
 
-  set fullName(value) {
-    if (typeof value !== "string") {
-      throw new Error("value is not string.");
-    }
+//   set fullName(value) {
+//     if (typeof value !== "string") {
+//       throw new Error("value is not string.");
+//     }
 
-    let parts = value.split(" ");
-    if (parts.length !== 2) {
-      throw new Error("enter your full name");
-    }
-    (this.firstName = parts[0]), (this.lastName = parts[1]);
+//     let parts = value.split(" ");
+//     if (parts.length !== 2) {
+//       throw new Error("enter your full name");
+//     }
+//     (this.firstName = parts[0]), (this.lastName = parts[1]);
+//   },
+// };
+
+// try {
+//   person.fullName = "asim";
+//   // 'e' yahan humne aik name rakha jo value hold kare ga
+// } catch (e) {
+//   console.log(e);
+// }
+
+// console.log(person);
+
+// ===============================================================================
+// this keyword
+
+let movie = {
+  title: "a",
+  tags: ["a", "b", "c"],
+  showTags() {
+    this.tags.forEach((tag) => {
+      console.log(tag + " " + this.title);
+    }, this);
   },
 };
 
-try {
-  person.fullName = "asim";
-  // 'e' yahan humne aik name rakha jo value hold kare ga
-} catch (e) {
-  console.log(e);
-}
-
-console.log(person);
+movie.showTags();
+console.log(movie);
