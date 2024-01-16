@@ -117,15 +117,43 @@
 // ===============================================================================
 // this keyword
 
-let movie = {
+/* this se object ki values ko hum handle kr sakte hain mtlb jaise log */
+
+// ==========>
+// const video = {
+//   title: "a",
+//   play() {
+//     console.log(this);
+//   },
+// };
+
+// video.play();
+
+// ==========>
+// function Video(title) {
+//   this.title = title;
+//   console.log(this);
+// }
+
+// //log to pehle se horaha tha this ki waja se (function main)
+// const vid1 = new Video("FARIGH");
+// // console.log(vid1);
+
+// ==========>
+const video = {
   title: "a",
-  tags: ["a", "b", "c"],
+  tags: [1, 2, 3],
+  // showTags() {
+  //   this.tags.forEach((tag) => console.log(this, tag));
+  // },
   showTags() {
-    this.tags.forEach((tag) => {
-      console.log(tag + " " + this.title);
+    this.tags.forEach(function (tag) {
+      console.log(this.title, tag);
     }, this);
   },
 };
 
-movie.showTags();
-console.log(movie);
+video.showTags();
+
+//
+//
