@@ -139,21 +139,60 @@
 // const vid1 = new Video("FARIGH");
 // // console.log(vid1);
 
-// ==========>
-const video = {
-  title: "a",
-  tags: [1, 2, 3],
-  // showTags() {
-  //   this.tags.forEach((tag) => console.log(this, tag));
-  // },
-  showTags() {
-    this.tags.forEach(function (tag) {
-      console.log(this.title, tag);
-    }, this);
-  },
-};
+// =========================================================>
+// =====??>>>>>
 
-video.showTags();
+// const video = {
+// title: "a",
+// tags: [1, 2, 3],
+// showTags() {
+// this.tags.forEach((tag) => console.log(this.title, tag));
+// },
+// };
+//
+// video.showTags();
 
+// =====??>>>>>
+
+// const video = {
+// title: "a",
+// tags: [1, 2, 3],
+// showTags() {
+// this.tags.forEach(function (tag) {
+// console.log(this.title, tag);
+// }, this);
+// },
+// };
 //
+// video.showTags();
+
+// =====??>>>>>
+
+// const video = {.
+// title: "a",.
+// tags: [1, 2, 3].,
+// showTags() {.
+// let self = th.is;
+// self.tags.for.Each(function (tag) {
+// console.log.(self.title, tag);
+// });.
+// },.
+// };.
 //
+// video.showTags();.
+//
+
+// ----------------------------------------------------------------->>>>
+
+function videoPlay(a, b) {
+  console.log(this);
+}
+
+// videoPlay(); ..// result = window function(s)
+
+// ...call
+videoPlay.call({ name: "a" }, 1, 2);
+// ...apply
+videoPlay.apply({ name: "b" }, [1, 2]);
+// ...bind (creates new function)
+videoPlay.bind({ name: "c" })(); //direct call
