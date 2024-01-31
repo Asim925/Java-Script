@@ -1,0 +1,3 @@
+/* pehle is keliye stars wali exercise ko samajhna hoga wapis ja kr mere khayal se then i wil do something
+and i am just loving that typing things and i am  still typing with thirty wpm 
+hence proved that i am dabbu bye bye */
