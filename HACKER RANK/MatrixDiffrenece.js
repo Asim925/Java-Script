@@ -1,17 +1,26 @@
 function diagonalDifference(arr) {
-  let leftToRightDiagnol = arr[0][0] + arr[1][1] + arr[2][2];
-  let rightToLeftDiagnol = arr[0][2] + arr[1][1] + arr[2][0];
-  let difference = leftToRightDiagnol - rightToLeftDiagnol;
-  if (difference < 0) difference = rightToLeftDiagnol - leftToRightDiagnol;
+  let diag1 = 0;
+  let diag2 = 0;
 
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr.length; j++) {
+      // for diagnol 1
+      if (i === j) diag1 += arr[i][j];
+      // for diagnol 2
+      if (i + j === arr.length - 1) diag2 += arr[i][j];
+    }
+  }
+
+  let difference = Math.abs(diag1 - diag2);
   return difference;
 }
 
+// sample input
+
 let array = [
-  [11, 2, 4, 5],
-  [4, 5, 6, 6],
-  [10, 8, 12, 6],
-  [10, 8, 12, 6],
+  [1, 2, 3],
+  [4, 5, 6],
+  [9, 8, 9],
 ];
 
 console.log(diagonalDifference(array));
