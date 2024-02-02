@@ -1,4 +1,4 @@
-let arr = [1, 1, 0, -1, -1];
+let arr = [-3, -52, 1, 0, 5, 4, 65];
 
 function plusMinus(arr) {
   let n = arr.length;
@@ -13,8 +13,12 @@ function plusMinus(arr) {
   let negativeRatio = (negatives / n).toFixed(6);
   let zeroesRatio = (zeroes / n).toFixed(6);
 
+  console.log("Here is the ratio of Posiives : " + positiveRatio);
+  console.log("Here is the ratio of Negaties : " + negativeRatio);
+  console.log("Here is the ratio of Zeros : " + zeroesRatio);
+
   // toFixed(n)  (used to increase or decrease the digits after decimal)
-  return `${positiveRatio} ${negativeRatio} ${zeroesRatio}`;
+  // return `${positiveRatio} ${negativeRatio} ${zeroesRatio}`;
 }
 
-console.log(plusMinus(arr));
+plusMinus(arr);
