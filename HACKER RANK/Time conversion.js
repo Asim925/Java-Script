@@ -29,3 +29,23 @@ function timeConversion(s) {
 let s = "07:00:00PM";
 
 console.log(timeConversion(s));
+
+// <<=============+++ AND HERE IS THE EASIEST SOLUTION ++++===============>>
+
+// function timeConversion(s) {
+// let hour = parseInt(s.slice(0, 2), 10);
+// let isPM = s.includes("PM");
+//
+// if (isPM && hour !== 12) {
+// hour += 12;
+// } else if (!isPM && hour === 12) {
+// hour = 0;
+// }
+//
+// return (hour < 10 ? "0" : "") + hour + s.slice(2, 8);
+// }
+//
+// let s = "12:00:00PM";
+// console.log(timeConversion(s));
+//
+//
