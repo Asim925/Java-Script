@@ -1,13 +1,15 @@
 function staircase(n) {
-  for (let i = 1; i <= n; i++) {
-    let spaces = "";
-    for (let j = n - 1; j <= 0; j--) spaces -= "";
+  for (let i = n - 1; i >= 0; i--) {
+    let pattern = " ".repeat(i);
+    let tags = "#".repeat(n - i);
 
-    let pattern = "";
-    for (let j = 1; j <= i; j++) pattern += "#";
-
-    console.log(spaces);
+    console.log(pattern + tags);
   }
 }
 
-staircase(6);
+staircase(9);
+/* 
+ repeat method sheikh.gpt ne bataya tha is se 
+ye hota hai ke loop ke mutabiq same cheez same 
+string ya value main add hojati hai yani usi 
+value main wohi value dobara add ho jati hai */
