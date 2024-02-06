@@ -7,7 +7,7 @@ function staircase(n) {
   }
 }
 
-staircase(9);
+staircase(2);
 /* 
  repeat method sheikh.gpt ne bataya tha is se 
 ye hota hai ke loop ke mutabiq same cheez same 
