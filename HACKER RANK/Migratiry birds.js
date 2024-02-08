@@ -48,8 +48,8 @@ function migratoryBirds(arr) {
 
   f.sort((a, b) => a - b); // sorting in ascending order
   let lowIDMax = f[0]; // setting the lowIDMax to the most lowest element of "f" array
-  console.log(lowIDMax);
+  return lowIDMax;
 }
 
-let arr = [1, 1, 2, 2, 3, 3, 3, 4, 5];
-migratoryBirds(arr);
+let arr = [1, 4, 4, 4, 5, 3];
+console.log(migratoryBirds(arr));
