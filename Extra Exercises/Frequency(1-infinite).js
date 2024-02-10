@@ -1,4 +1,5 @@
-function countNumbers(numbers) {
+// ========================++++++++++++ ARRAY METHOD ++++++++++++=========================//
+/* function countNumbers(numbers) {
   let frequencies = [];
 
   for (let i = 0; i < numbers.length; i++) {
@@ -18,4 +19,29 @@ function countNumbers(numbers) {
 
 let numbers = [1, 2, 3, 4, 7, 7, 7, 7, 7, 7, 7, 7, 3, 7, 7, 7];
 let frequencies = countNumbers(numbers);
+console.log(frequencies);
+ */
+
+// ========================++++++++++++ OBJECT METHOD ++++++++++++=========================//
+function countNumbers(numbers) {
+  let obj = {};
+  let maxCount = 0;
+  let mostCommonNum = 0;
+  for (let number of numbers) {
+    obj[number] = (obj[number] || 0) + 1;
+
+    if (
+      obj[number] > maxCount ||
+      (obj[number] === maxCount && number < mostCommonNum)
+    ) {
+      maxCount = obj[number];
+      mostCommonNum = number;
+    }
+  }
+  return mostCommonNum;
+}
+
+let numbers = [1, 2, 12, 1, 2, 3, 3];
+let frequencies = countNumbers(numbers);
+
 console.log(frequencies);
