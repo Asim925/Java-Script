@@ -1,4 +1,5 @@
-function migratoryBirds(arr) {
+//================================= FARIGH METHOD ======================================= //
+/* function migratoryBirds(arr) {
   // counters
   let one = 0;
   let two = 0;
@@ -53,3 +54,31 @@ function migratoryBirds(arr) {
 
 let arr = [1, 4, 4, 4, 5, 3];
 console.log(migratoryBirds(arr));
+ */
+
+//=================================  GOOD METHOD ======================================= //
+
+function migratoryBirds(arr) {
+  let counter = {};
+  let maxCount = 0;
+  let mostCommonBird = 0;
+
+  for (let bird of arr) {
+    counter[bird] = (counter[bird] || 0) + 1; // birds are the keys of objects
+
+    // checking the lowest Type's occurences
+    if (
+      // if key ki value of the object is > max-count ||
+      counter[bird] > maxCount || // if key ki value  === max count && if bird < most common bird
+      (counter[bird] === maxCount && bird < mostCommonBird)
+    ) {
+      maxCount = counter[bird];
+      mostCommonBird = bird;
+    }
+  }
+
+  console.log(mostCommonBird);
+}
+
+let arr = [1, 2, 3, 4, 1, 2, 2];
+migratoryBirds(arr);
