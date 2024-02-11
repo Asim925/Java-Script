@@ -1,14 +1,14 @@
 function gradingStudents(grades) {
-  for (let grade of grades) {
-    if (!(grade < 38) && grade % 5 >= 3) {
-      for (let i = 3; i <= 5; i++) {
-        for (let j = 0; j <= 2; j++) if (grade % 5 === i) grade += j;
-      }
-      if (!(grade < 38) && grade % 5 <= 3) console.log(grade);
-      // console.log(grade);
+  for (let i = 0; i < grades.length; i++) {
+    let gradesBy5 = grades[i] % 5;
+
+    if (!(grades[i] < 38) && gradesBy5 >= 3) {
+      if (gradesBy5 === 3) grades[i] += 2;
+      if (gradesBy5 === 4) grades[i] += 1;
     }
   }
+  return grades;
 }
 
-let grades = [37, 38, 39];
-gradingStudents(grades);
+let grades = [35, 36, 37, 38, 39, 40, 41, 42, 43];
+console.log(gradingStudents(grades));
