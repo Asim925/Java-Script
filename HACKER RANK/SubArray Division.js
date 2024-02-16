@@ -1,18 +1,18 @@
 /* s => array , d => day , m => month */
 function birthday(s, d, m) {
-  let count = 0;
+  // let sorted = s.sort((a, b) => a - b);
+  let results = [];
   for (let i = 0; i < s.length; i++)
-    for (let j = 0; j < s.length; j++)
-      if (i <= j && i !== j) {
-        console.log(s[i], s[j]);
-        if (s[i] === s[i]) continue;
-
-        let added = s[i] + s[j];
-        // if (added === d) count++;
-      }
-
+    for (let j = i; j < s.length; j++) {
+      results.push([s[i], s[j]]);
+      console.log([s[i], s[j]]);
+    }
+  let count = 0;
+  for (let pair of results) {
+    if (pair.length === m && pair.reduce((a, b) => a + b) === d) count++;
+  }
   return count;
 }
 
-let s = [2, 2, 1, 3, 2];
-console.log(birthday(s, 4, 2));
+let s = [4];
+console.log(birthday(s, 4, 1));
