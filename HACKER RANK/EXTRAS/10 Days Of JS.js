@@ -1,13 +1,14 @@
 function vowelsAndConsonants(s) {
-  let split = s.split("");
+  let splitted = s.split("");
   let vowels = ["a", "e", "i", "o", "u"];
-  for (let n of vowels) {
-    if (s.includes(n)) {
-      let letter = split.splice(split.indexOf(n), 1);
-      console.log(letter);
-    }
-  }
-  console.log(split);
+  for (let i = 0; i < splitted.length; i++)
+    for (let n of vowels)
+      if (splitted[i] === n) {
+        let index = splitted.indexOf(splitted[i]);
+        let element = splitted.splice(index, 1)[0];
+        splitted.unshift(element);
+      }
+  console.log(splitted);
 }
 
 let s = "javascriptLoops";
