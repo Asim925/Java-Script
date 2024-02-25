@@ -8,5 +8,5 @@ function squares(a, b) {
   }
   return count;
 }
-
+//
 console.log(squares(1, 50000));
