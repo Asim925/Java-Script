@@ -1,11 +1,10 @@
 function pairs(k, arr) {
   let count = 0;
-  for (let i = 0; i < arr.length; i++)
-    for (let j = i; j < arr.length; j++) {
-      let pair = [arr[i], arr[j]];
-      console.log(pair);
-      if (pair.reduce((a, b) => Math.abs(a - b)) === k) count++;
-    }
+
+  for (let i = 0; i < arr.length - 1; i++)
+    for (let j = i + 1; j < arr.length; j++)
+      if (Math.abs(arr[i] - arr[j]) === k) count++;
+
   return count;
 }
 
