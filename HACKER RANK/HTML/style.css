@@ -1,0 +1,14 @@
+body {
+  height: 1000vh;
+}
+
+.head {
+  position: fixed;
+  border-bottom: 5px dotted rgb(200, 255, 0);
+  background-color: burlywood;
+  width: 100%;
+}
+
+.main {
+  padding-top: 100px;
+}
