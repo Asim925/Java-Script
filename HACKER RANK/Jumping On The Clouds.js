@@ -1,20 +1,14 @@
-// k: jump unit
-function jumpingOnClouds(c, k) {
-  let energy = 100;
-  //   for (let i = 0; i < c.length; i += k) {
-  //     let cloud = c[(i + k) % c.length];
-  //     if (cloud === 1) energy -= 2;
-  //     energy--;
-  //     console.log(cloud);
-  //   }
-
-  for (let i = 0; i < c.length; i += k) {
-    if (c[i] === 1) energy -= 2;
-    energy--;
-    //   console.log(energy);
+function jumpingOnClouds(c) {
+  let jump = 0;
+  for (let i = 0; i < c.length; i++) {
+    if (c[i + 2] === 0) {
+      jump++;
+      i = i + 1;
+      continue;
+    } else if (c[i + 1] === 0) jump++;
   }
-  return energy;
+  return jump;
 }
 
-let c = [1, 1, 1, 0, 1, 1, 0, 0, 0, 0];
-console.log(jumpingOnClouds(c, 3));
+let c = [0, 0, 1, 0, 0, 1, 0];
+console.log(jumpingOnClouds(c));
