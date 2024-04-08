@@ -1,18 +1,14 @@
 function climbingLeaderboard(ranked, player) {
   let positions = [];
   for (let i = 0; i < player.length; i++) {
-    ranked.push(player[i]);
+    if (!ranked.includes(player[i])) ranked.push(player[i]);
     ranked.sort((a, b) => b - a);
 
-    // FILTERING THE REPETITIONS
-    let rankings = ranked.filter(
-      (value, index) => ranked.indexOf(value) === index
+    positions.push(
+      ranked
+        .filter((value, index) => ranked.indexOf(value) === index)
+        .indexOf(player[i]) + 1
     );
-
-    let position = rankings.indexOf(player[i]) + 1;
-    positions.push(position);
-
-    ranked.splice(ranked.indexOf(player[i]), 1);
   }
 
   return positions;
