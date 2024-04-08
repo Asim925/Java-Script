@@ -8,4 +8,3 @@ function maximizingXor(l, r) {
 }
 
 console.log(maximizingXor(5, 6));
-console.log(5 ^ 6, 5 ^ 5, 6 ^ 6, 6 ^ 5);
