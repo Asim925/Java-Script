@@ -9,4 +9,3 @@ function flippingBits(n) {
 
 console.log(flippingBits(9));
 //
-//
