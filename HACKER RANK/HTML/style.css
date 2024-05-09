@@ -1,14 +1,18 @@
-body {
-  height: 1000vh;
+.icon-container {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.head {
-  position: fixed;
-  border-bottom: 5px dotted rgb(200, 255, 0);
-  background-color: burlywood;
-  width: 100%;
+.icon {
+  width: 50px;
+  height: 50px;
+  fill: blue; /* default color */
+  transition: fill 0.3s ease; /* smooth transition */
 }
 
-.main {
-  padding-top: 100px;
+.icon:hover {
+  fill: red; /* color on hover */
 }
