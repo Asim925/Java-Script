@@ -6,10 +6,10 @@ function insertionSort1(n, arr) {
       let last = arr.filter((val, ind) => ind === arr.indexOf(val));
       last.push(x);
       last.sort((a, b) => a - b);
-      console.log(last);
+      console.log(last.join(" "));
       break;
     }
-    console.log(arr);
+    console.log(arr.join(" "));
   }
 }
 
