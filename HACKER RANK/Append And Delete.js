@@ -1,5 +1,6 @@
 function appendAndDelete(s, t, k) {
-  if (s === t) return "Yes";
+  if (s === t || k % (s.length - t.length) === 0) return "Yes";
+  if (s.length - t.length > k) return "No";
   let initial = s.split("");
   let final = t.split("");
   let i = 0;
