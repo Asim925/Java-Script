@@ -1,9 +1,9 @@
 function getTotalX(a, b) {
   let count = 0;
-  let maxArr1 = Math.min(...a);
-  let minArr2 = Math.max(...b);
+  let min = Math.min(...a); // Minimum value
+  let max = Math.max(...b); // Maximum value
 
-  for (let i = maxArr1; i <= minArr2; i++) {
+  for (let i = min; i <= max; i++) {
     let aIsFactorsOfValue = a.every((factor) => i % factor === 0);
     let bIsDivisableByValue = b.every((factor) => factor % i === 0);
     if (aIsFactorsOfValue && bIsDivisableByValue) count++;

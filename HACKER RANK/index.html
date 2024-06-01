@@ -3,15 +3,138 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SVG Icon Hover</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Happy Birthday Usman!</title>
+    <style>
+      body {
+        background-color: #000000; /* Black background */
+        font-family: "Arial", sans-serif;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        color: #ffffff; /* White text color */
+      }
+      .container {
+        margin-top: 50px;
+      }
+      h1 {
+        font-size: 3em;
+        color: #ff8c00; /* Dark orange color */
+        animation: colorchange 3s infinite;
+      }
+      @keyframes colorchange {
+        0% {
+          color: #ff8c00;
+        }
+        25% {
+          color: #ffa500;
+        }
+        50% {
+          color: #ff4500;
+        }
+        75% {
+          color: #ffd700;
+        }
+        100% {
+          color: #ff8c00;
+        }
+      }
+      p {
+        font-size: 1.5em;
+        color: #dcdcdc; /* Light grey color */
+      }
+      .balloons {
+        position: relative;
+        width: 100%;
+        height: 300px;
+        overflow: hidden;
+      }
+      .balloon {
+        position: absolute;
+        bottom: -100px;
+        animation: float 7s ease-in-out infinite;
+      }
+      @keyframes float {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-300px);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+      .balloon:nth-child(1) {
+        left: 10%;
+        animation-delay: 0s;
+      }
+      .balloon:nth-child(2) {
+        left: 30%;
+        animation-delay: 2s;
+      }
+      .balloon:nth-child(3) {
+        left: 50%;
+        animation-delay: 4s;
+      }
+      .balloon:nth-child(4) {
+        left: 70%;
+        animation-delay: 1s;
+      }
+      .balloon:nth-child(5) {
+        left: 90%;
+        animation-delay: 3s;
+      }
+    </style>
   </head>
   <body>
-    <div class="icon-container">
-      <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <path d="M0 0h24v24H0z" fill="none" />
-        <path d="M11 18v-6h2v6h3l-4 4-4-4h3z" />
-      </svg>
+    <div class="container">
+      <h1>🎉 Happy Birthday Usman! 🎉</h1>
+      <p>
+        🎂 Wishing you a day filled with love, laughter, and all your favorite
+        things! 🎁
+      </p>
+      <p>
+        🎈 May this year bring you endless happiness, boundless success, and
+        everything you've been dreaming of! 🎈
+      </p>
+      <p>
+        🌟 Here's to celebrating you and all the amazing moments we've shared
+        together; may our friendship grow even stronger! 🌟
+      </p>
+      <div class="balloons">
+        <img
+          src="https://via.placeholder.com/100x150?text=🎈"
+          alt="Balloon 1"
+          class="balloon"
+        />
+        <img
+          src="https://via.placeholder.com/100x150?text=🎈"
+          alt="Balloon 2"
+          class="balloon"
+        />
+        <img
+          src="https://via.placeholder.com/100x150?text=🎈"
+          alt="Balloon 3"
+          class="balloon"
+        />
+        <img
+          src="https://via.placeholder.com/100x150?text=🎈"
+          alt="Balloon 4"
+          class="balloon"
+        />
+        <img
+          src="https://via.placeholder.com/100x150?text=🎈"
+          alt="Balloon 5"
+          class="balloon"
+        />
+      </div>
     </div>
+    <script>
+      // This script will create a simple pop-up message when the page loads
+      window.onload = function () {
+        alert("🎉 Happy Birthday Usman! 🎉 We hope you have an amazing day!");
+      };
+    </script>
   </body>
 </html>
