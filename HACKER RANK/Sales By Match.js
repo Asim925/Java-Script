@@ -4,6 +4,7 @@ function sockMerchant(n, ar) {
   let singles = ar.filter((value, index) => ar.indexOf(value) === index);
   for (let single of singles) {
     let singleElements = ar.filter((n) => n === single);
+    console.log(singleElements);
     let pairsCount = Math.floor(singleElements.length / 2);
     count += pairsCount;
   }
