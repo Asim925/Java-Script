@@ -1,12 +1,12 @@
 function squares(a, b) {
   let count = 0;
-  for (let i = 1; i * i <= b; i++) {
-    let square = i * i;
-    if (square >= a && square <= b) {
-      count++;
-    }
+  let start = Math.ceil(Math.sqrt(a)); // Start from the smallest integer whose square is >= a
+  let end = Math.floor(Math.sqrt(b)); // End at the largest integer whose square is <= b
+
+  for (let i = start; i <= end; i++) {
+    count++;
   }
+
   return count;
 }
-//
-console.log(squares(1, 50000));
+console.log(squares(1, 10));
