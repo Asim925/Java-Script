@@ -1,82 +1,54 @@
 function caesarCipher(s, k) {
-  // Making New sequence
-  let letters = [
-    "a",
-    "b",
-    "c",
-    "d",
-    "e",
-    "f",
-    "g",
-    "h",
-    "i",
-    "j",
-    "k",
-    "l",
-    "m",
-    "n",
-    "o",
-    "p",
-    "q",
-    "r",
-    "s",
-    "t",
-    "u",
-    "v",
-    "w",
-    "x",
-    "y",
-    "z",
-  ];
-  let upperLetters = [
-    "A",
-    "B",
-    "C",
-    "D",
-    "E",
-    "F",
-    "G",
-    "H",
-    "I",
-    "J",
-    "K",
-    "L",
-    "M",
-    "N",
-    "O",
-    "P",
-    "Q",
-    "R",
-    "S",
-    "T",
-    "U",
-    "V",
-    "W",
-    "X",
-    "Y",
-    "Z",
-  ];
-  for (let i = 0; i < k; i++) {
-    let removedSmall = letters.shift();
-    letters.push(removedSmall);
+  k = k % 26;
+  let result = "";
 
-    let removedLarge = upperLetters.shift();
-    upperLetters.push(removedLarge);
-  }
+  for (let letter of s) {
+    let code = letter.charCodeAt(0);
 
-  // Main
-  let stringLetters = s.split("");
-  for (let i = 0; i < stringLetters.length; i++) {
-    if (stringLetters[i] === "-") continue;
-    if (stringLetters[i] === stringLetters[i].toUpperCase()) continue;
-    else {
-      let index = letters.indexOf(stringLetters[i]);
-      stringLetters[i] = letters[index + k];
+    if (code >= 65 && code <= 90) {
+      code += k;
+      if (code > 90) code -= 26;
+      result += String.fromCharCode(code);
+    } else if (code >= 97 && code <= 122) {
+      code += k;
+      if (code > 122) code -= 26;
+      result += String.fromCharCode(code);
+    } else if (code < 65 || (code > 90 && code < 97) || code > 122) {
+      result += letter;
+      continue;
     }
   }
-
-  return stringLetters;
+  return result;
 }
+
+// function caesarCipher(s, k) {
+//   k = k % 26;
+//   let output = "";
+//   for (let a of s) {
+//     let code = a.charCodeAt(0);
+//     // A - Z
+//     if (code >= 65 && code <= 90) {
+//       let newCode = code + k;
+//       if (newCode > 90) {
+//         newCode -= 26;
+//       }
+//       output += String.fromCharCode(newCode);
+//     }
+//     // a - z
+//     if (code >= 97 && code <= 122) {
+//       let newCode = code + k;
+//       if (newCode > 122) {
+//         newCode -= 26;
+//       }
+//       output += String.fromCharCode(newCode);
+//     }
+//     if (code < 65 || (code > 90 && code < 97) || code > 122) {
+//       output += a;
+//       continue;
+//     }
+//   }
+//   return output;
+// }
 
 let s = "Always-Look-on-the-Bright-Side-of-Life";
 console.log(caesarCipher(s, 5));
