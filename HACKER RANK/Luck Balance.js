@@ -1,22 +1,26 @@
 function luckBalance(k, contests) {
-  let total = -1;
-  let min = Infinity;
+  let importants = contests
+    .filter((arr) => arr[1] === 1)
+    .sort((a, b) => a[0] - b[0]);
+
+  let totalLuck = 0;
   for (let i = 0; i < contests.length; i++) {
-    total += contests[i][0];
-    if (contests[i][1] === 1 && min > contests[i][0]) min = contests[i][0];
+    totalLuck += contests[i][0];
   }
-  return total;
+
+  if (importants.length === k) return totalLuck;
+  else {
+    let minimumLucks = 0;
+    for (let i = 0; i < importants.length - k; i++) {
+      minimumLucks += importants[i][0];
+    }
+    return totalLuck - minimumLucks * 2;
+  }
 }
 
 let contests = [
-  [8, 5],
-  [13, 1],
-  [10, 1],
-  [9, 1],
-  [8, 1],
-  [13, 1],
-  [12, 1],
-  [18, 1],
-  [13, 1],
+  [5, 1],
+  [1, 1],
+  [4, 0],
 ];
-console.log(luckBalance(3, contests));
+console.log(luckBalance(1, contests));
