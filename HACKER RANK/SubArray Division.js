@@ -9,5 +9,5 @@ function birthday(s, d, m) {
   return count;
 }
 
-let s = [2, 2, 1, 3, 2];
-console.log(birthday(s, 4, 2));
+let s = [4];
+console.log(birthday(s, 4, 1));
